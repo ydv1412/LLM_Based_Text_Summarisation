@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        textarea { width: 80%; height: 150px; margin-bottom: 10px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style> -->
+</head>
+<body>
+    <h2>Text Summarizer</h2>
+    <textarea id="inputText" placeholder="Enter text to summarize..."></textarea><br>
+    <button onclick="summarizeText()">Summarize</button>
+    <h3>Summary:</h3>
+    <textarea id="outputText" readonly></textarea>
+
+    <script>
+        function summarizeText() {
+            let inputText = document.getElementById("inputText").value;
+
+            fetch("/summarize", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: inputText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("outputText").value = data.summary;
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>

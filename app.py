@@ -34,17 +34,14 @@ peft_model_3 = PeftModel.from_pretrained(model,
                                        is_trainable=False)
 
 generation_kwargs = {
-    "min_length": 5,
-    "top_k": 0.0,
-    "top_p": 1.0,
+    "min_length": 10,  # Avoid extremely short summaries
+    "max_length": 100,  # Ensure longer summaries
+    "top_k": 50,  # Avoid extreme randomness
+    "top_p": 0.9,  # Encourage diverse outputs
+    "temperature": 0.7,  # Lower values make output more deterministic
     "do_sample": True
 }
 
-reward_kwargs = {
-    "top_k": None, # Return all scores.
-    "function_to_apply": "none", # You want the raw logits without softmax.
-    "batch_size": 16
-}
 
 
 @app.route('/')

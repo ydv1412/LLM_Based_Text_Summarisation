@@ -17,3 +17,7 @@ Pointers:-
 
 # Start a virtual Environment:
 conda create -p venv python==3.7 -y
+
+# To run the project:
+run the app.py file
+

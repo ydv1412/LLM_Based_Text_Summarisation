@@ -20,23 +20,28 @@ Pointers:-
 
 
 # Create a virtual Environment:
-conda create -p venv python==3.7 -y
+```
+conda create -p venv python==3.7 -y 
 conda activate venv
+```
 
 # Install Dependencies
+```
 pip install -r requirements.txt
-
+```
 The model was trained on jupyter notebook for long hours. It was saved and moved here for web app deployment.
 
 # To run the project:
+```
 python app.py
-
+```
 #Evaluation Metrics
 The performance of the fine-tuned model is evaluated using:
 1. ROUGE Score (ROUGE-1, ROUGE-2, ROUGE-L)
 2. Toxicity Score (from RoBERTa-based reward model)
 
 # Project Structure
+```
 LLM_Based_Text_Summarisation/
 │── ppo_trained_model/          # Saved fine-tuned model
 │── static/                   # Styles
@@ -45,7 +50,7 @@ LLM_Based_Text_Summarisation/
 │── Untitled.ipynb              # Jupyter notebook
 │── requirements.txt            # Required dependencies
 │── README.md                   # Documentation
-
+```
 
 # Future Enhancements
 1. Training the model on high end systems for better results.

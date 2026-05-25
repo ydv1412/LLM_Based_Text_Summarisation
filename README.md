@@ -1,6 +1,6 @@
 # LLM_Based_Text_Summarisation
 This project focuses on fine-tuning Google's Flan-T5 large language model using the PEFT (Parameter Efficient Fine-Tuning) technique for text summarization. Additionally, I have further fine-tuned the model using PPO (Proximal Policy Optimization) reinforcement learning to generate less toxic summaries, using Facebook's RoBERTa model as the reward model.
-
+Try it here on: https://ydvshri1412-textsummarisation.hf.space/
 
 
 Pointers:-

@@ -204,7 +204,7 @@ A short demonstration of the complete pipeline can be added here:
 
 A detailed presentation covering the methodology, dataset analysis, PEFT fine-tuning, PPO training, evaluation, web application and results is available here:
 
- **[View Project Presentation](./presentation/LLM_Based_Text_Summarisation.pdf)**
+ **[View Project Presentation](./LLM_Based_Text_Summarisation.pdf)**
 
 ---
 

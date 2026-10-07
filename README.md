@@ -192,10 +192,6 @@ Users can provide conversational text and generate a summary using the fine-tune
 
 ##  Demo
 
-A short demonstration of the complete pipeline can be added here:
-
-**Input Dialogue → Generated Summary → Model Output**
-
 >  **Demo video:** Coming soon
 
 ---
